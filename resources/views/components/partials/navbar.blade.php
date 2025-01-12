@@ -1,0 +1,13 @@
+<nav class="fixed z-50 w-[90rem] top-7 container-withShadow">
+    <div class="flex justify-between items-center py-4 px-6">
+        <div class="pr-12">
+            <img width="50" src="{{ asset('assets/svg/logos.svg') }}" alt="Icon">
+        </div>
+        <ul class="flex gap-10 font-semibold">
+            <li>Home</li>
+            <li>Artikel</li>
+            <li>Riwayat</li>
+        </ul>
+        <button class="bg-[#B12B32] text-white py-2 px-6 rounded-3xl">Login</button>
+    </div>
+</nav>
