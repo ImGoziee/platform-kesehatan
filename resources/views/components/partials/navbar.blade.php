@@ -8,6 +8,6 @@
             <li>Artikel</li>
             <li>Riwayat</li>
         </ul>
-        <button class="bg-[#B12B32] text-white py-2 px-6 rounded-3xl">Login</button>
+        <button class="duration-300 bg-[#B12B32] hover:bg-white hover:text-[#B12B32] text-white font-semibold py-2 px-6 rounded-3xl">Login</button>
     </div>
 </nav>

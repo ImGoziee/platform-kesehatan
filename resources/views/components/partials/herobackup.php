@@ -1,6 +1,6 @@
 <main class="panjang-maksimal">
-    <div class=" relative flex justify-between items-center px-7 h-screen">
-        <div id="content-slider" class="absolute w-full h-full flex items-center">
+    <div class=" relative flex justify-between items-center px-7 h-[900px]">
+        <div class="relative w-full h-full flex items-center">
             <div class="relative flex flex-col gap-16">
                 <div class="">
                     <h1 class="text-5xl font-semibold">Solusi Kesehatan Untuk Anda!</h1>
@@ -8,7 +8,7 @@
                 </div>
                 <div class="flex gap-4">
                     @for ($i = 0; $i < 4; $i++)
-                        <div class=" w-[155px] h-[155px] flex flex-col justify-center items-center gap-2"></div>
+                        <div class="bg-red-400 w-[155px] h-[155px] flex flex-col justify-center items-center gap-2"></div>
                     @endfor
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <img class="2xl:w-[850px]" src="{{ asset('assets/img/main-chac.png') }}" alt="Icon">
             </div>
         </div>
-        <div class="flex gap-4 absolute bottom-1/2 translate-y-[110%]">
+        <div class="flex gap-4 absolute bottom-0">
             <div class="bg-white rounded-2xl w-[155px] h-[155px] flex flex-col justify-center items-center gap-2">
                 <img class="mix-blend-multiply" width="80" src="{{ asset('assets/svg/jadwal-ft.svg') }}" alt="Icon">
                 <p class="text-[14px] font-medium">Jadwal Dokter</p>
