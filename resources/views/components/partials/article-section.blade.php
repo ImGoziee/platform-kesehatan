@@ -21,7 +21,7 @@
                                     <div
                                         class="bg-[#E00852] text-white h-[26px] w-[134.5px] rounded-[25px] flex justify-center items-center">
                                         Lorem, ipsum.</div>
-                                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur</p>
+                                    <p class="font-medium">Lorem ipsum dolor sit amet consectetur.</p>
                                 </div>
                             </div>
                         @endfor
