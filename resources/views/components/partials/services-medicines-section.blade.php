@@ -5,7 +5,7 @@
             <div class="flex w-full justify-between">
                 @for ($i = 0; $i < 7; $i++)
                     <div class="flex-col">
-                        <div class="bg-[#DDEDFD] text-white py-20 px-20 rounded-2xl"></div>
+                        <div class="bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"></div>
                         <p class="font-medium text-center">Lorem</p>
                     </div>
                 @endfor
@@ -16,7 +16,7 @@
             <div class="flex w-full justify-between">
                 @for ($i = 0; $i < 7; $i++)
                     <div class="flex-col">
-                        <div class="bg-[#DDEDFD] text-white py-20 px-20 rounded-2xl"></div>
+                        <div class="bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"></div>
                         <p class="font-medium text-center">Lorem</p>
                     </div>
                 @endfor
@@ -48,8 +48,6 @@
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const container = document.querySelector('.flex.gap-3');
