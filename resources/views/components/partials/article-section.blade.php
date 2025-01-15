@@ -34,8 +34,10 @@
             <div class="grid grid-cols-6 gap-[15px]">
                 @for ($i = 0; $i < 6; $i++)
                     <div class="col-span-2 bg-[#D9D9D9] h-[90px] w-[448px] rounded-[25px] p-2.5 flex gap-[45px] items-center mb-[30px]">
-                        <div class="w-[70px] h-[70px] bg-[#E00852] rounded-[25px]"></div>
-                        <h1 class="text-[32px] font-semibold">{{ $i === 5 ? 'Lihat Semua' : 'Lorem, ipsum.' }}</h1>
+                        {!! $i !== 5 ? '<div class="w-[70px] h-[70px] bg-[#E00852] rounded-[25px]"></div>' : '' !!}
+                        <div class="{{ $i === 5 ? 'flex justify-center w-full' : '' }}">
+                            <h1 class="text-[32px] font-semibold">{{ $i === 5 ? 'Lihat Semua' : 'Lorem, ipsum.' }}</h1>
+                        </div>
                     </div>
                 @endfor
             </div>
