@@ -127,7 +127,7 @@
                 tl.to(slides[currentSlide], {
                         opacity: 0,
                         duration: 1,
-                        filter: 'blur(8px)',
+                        // filter: 'blur(8px)',
                         scale: 0.9,
                         ease: "power2.inOut"
                     }, 0)
@@ -148,7 +148,7 @@
                 tl.to(slides[currentSlide], {
                         opacity: 0,
                         duration: 1,
-                        filter: 'blur(8px)',
+                        // filter: 'blur(8px)',
                         scale: 0.9,
                         ease: "power2.inOut"
                     }, 0)
