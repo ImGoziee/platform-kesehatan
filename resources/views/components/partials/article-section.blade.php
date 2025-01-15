@@ -14,7 +14,7 @@
                 <div class="overflow-x-hidden py-2 px-1 rounded-lg">
                     <div class="flex gap-3 w-full">
                         @for ($i = 1; $i < 30; $i++)
-                            <div class="bg-[#D9D9D9] min-w-[410px] h-[420px] rounded-2xl flex flex-col justify-center items-center overflow-hidden shadow-sm">
+                            <div class="bg-[#D9D9D9] min-w-[450px] h-[420px] rounded-2xl flex flex-col justify-center items-center overflow-hidden shadow-sm">
                                 <div class="w-full h-[270px] flex justify-center items-center">image</div>
                                 <div class="w-full h-[150px] bg-white flex flex-col gap-4 py-[25px] px-[29px]">
                                     <h1 class="text-[22px] font-semibold leading-6">Lorem, ipsum dolor.</h1>

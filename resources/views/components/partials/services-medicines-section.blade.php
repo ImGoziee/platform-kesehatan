@@ -37,7 +37,7 @@
                     <div class="flex gap-3 w-full">
                         @for ($i = 1; $i < 30; $i++)
                             <div
-                                class="bg-[#D9D9D9] min-w-[410px] h-56 rounded-2xl flex justify-center items-center overflow-hidden">
+                                class="bg-[#D9D9D9] min-w-[450px] h-56 rounded-2xl flex justify-center items-center overflow-hidden">
                                 {{-- <img class="h-full" width="" src="{{ asset('assets/img/image.png') }}" alt="Icon"> --}}
                                 asd
                             </div>
@@ -56,7 +56,7 @@
         const slides = container.children;
 
         // Configuration
-        const slideWidth = 384 + 12; // 384px (min-w-96) + 12px (gap-3)
+        const slideWidth = 450 + 12; // 384px (min-w-96) + 12px (gap-3)
         const animationDuration = 0.5;
 
         let currentPosition = 0;
