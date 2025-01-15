@@ -11,7 +11,7 @@
                     class="absolute -right-0 translate-x-1/2 top-1/2 -translate-y-1/2 bg-gray-600 w-10 h-10 rounded-full z-10 text-white">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <div class="overflow-x-hidden py-2 px-1 rounded-lg">
+                <div class="overflow-x-hidden py-2 px-1 rounded-3xl">
                     <div id="carousell-2" class="flex gap-3 w-full">
                         @for ($i = 1; $i < 30; $i++)
                             <div class="bg-[#D9D9D9] min-w-[450px] h-[420px] rounded-2xl flex flex-col justify-center items-center overflow-hidden shadow-sm">

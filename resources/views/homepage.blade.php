@@ -29,10 +29,15 @@
     <section class="relative -z-30">
         <x-partials.hero />
     </section>
+    {{-- services & medicines section --}}
     <section class="bg-[#E00852] rounded-t-[35px]">
         <x-partials.services-medicines-section />
         <x-partials.article-section />
     </section>
+    {{-- footer --}}
+    <footer class="bg-[#E00852]">
+        <x-partials.footer />
+    </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>

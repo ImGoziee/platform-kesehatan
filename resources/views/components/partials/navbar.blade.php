@@ -1,4 +1,4 @@
-<nav class="fixed z-50 w-[98rem] top-7 container-withShadow">
+<nav class="fixed z-50 lg:w-[80rem] 2xl:w-[98rem] top-7 container-withShadow">
     <div class="flex justify-between items-center py-4 px-6">
         <div class="pr-12">
             <img width="50" src="{{ asset('assets/svg/logos.svg') }}" alt="Icon">

@@ -10,7 +10,7 @@
 }
 
 .panjang-maksimal {
-    max-width: 98rem;
+    @apply max-w-[80rem] 2xl:max-w-[98rem];
     margin: 0 auto;
 }
 
