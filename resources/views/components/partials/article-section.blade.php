@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="flex flex-col gap-9 py-[65px] px-[94px]">
-            <h1 class="text-[42px] font-semibold">Obat & Vitamin</h1>
+            <h1 class="text-[42px] font-semibold">Obat Herbal</h1>
             <div class="grid grid-cols-6 gap-[15px]">
                 @for ($i = 0; $i < 6; $i++)
                     <div class="col-span-2 bg-[#D9D9D9] h-[90px] w-[448px] rounded-[25px] py-2.5 px-7 flex gap-[45px] items-center mb-[30px]">

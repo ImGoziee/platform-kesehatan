@@ -6,7 +6,6 @@
         <ul class="flex gap-10 font-semibold">
             <li>Home</li>
             <li>Artikel</li>
-            <li>Riwayat</li>
         </ul>
         <button class="duration-300 bg-[#B12B32] hover:bg-white hover:text-[#B12B32] text-white font-semibold py-2 px-6 rounded-3xl">Login</button>
     </div>

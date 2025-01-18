@@ -37,7 +37,7 @@
                     <div id="carousell-1" class="flex gap-3 w-full">
                         @for ($i = 1; $i < 30; $i++)
                             <div
-                                class="bg-[#D9D9D9] min-w-[450px] h-56 rounded-2xl flex justify-center items-center overflow-hidden">
+                                class="bg-[#D9D9D9] min-w-[450px] h-56 rounded-2xl flex justify-center items-center overflow-hidden cursor-pointer">
                                 {{-- <img class="h-full" width="" src="{{ asset('assets/img/image.png') }}" alt="Icon"> --}}
                                 asd
                             </div>
