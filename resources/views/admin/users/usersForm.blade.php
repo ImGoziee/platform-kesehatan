@@ -1,11 +1,12 @@
-<form method="POST" action="{{ $user->id ? route('admin.users.update', $user->id) : route('admin.users.store') }}" class="mb-6 border border-gray-300 rounded p-4 bg-gray-50">
+<form method="POST" id="user-form" action="{{ $user->id_user ? route('admin.users.update', $user->id_user) : route('admin.users.store') }}" class="mb-6 border border-gray-300 rounded p-4 bg-gray-50">
     @csrf
-    @if ($user->id)
+    @if ($user->id_user)
         @method('PUT')
     @endif
+    <!-- <input type="hidden" name="_method" value="PUT"> -->
 
     <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-bold">{{ $user->id ? 'Edit User' : 'Add User' }}</h2>
+        <h2 class="text-lg font-bold">{{ $user->id_user ? 'Edit User' : 'Add User' }}</h2>
         <!-- Tombol Close -->
         <button type="button" onclick="closeForm()" class="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600">
             Close
@@ -25,13 +26,13 @@
     <div class="mb-4">
         <label for="password" class="block font-medium text-gray-700">Password</label>
         <input type="password" name="password" id="password" class="w-full px-3 py-2 border border-gray-300 rounded focus:ring focus:ring-blue-200">
-        @if ($user->id)
+        @if ($user->id_user)
             <small class="text-gray-500">Kosongkan jika tidak ingin mengubah password</small>
         @endif
     </div>
 
     <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-        {{ $user->id ? 'Update User' : 'Add User' }}
+        {{ $user->id_user ? 'Update User' : 'Add User' }}
     </button>
 </form>
 
@@ -40,6 +41,8 @@
         const formContainer = document.getElementById('user-form');
         formContainer.classList.add('hidden');  // Menyembunyikan form
         formContainer.querySelector('form').reset();  // Mereset form
+        formContainer.querySelector('form input[name="_method"]').remove();
+        formContainer.querySelector('form button[type="submit"]').innerText = 'Add User';  // Mereset form
     }
 
     document.addEventListener('DOMContentLoaded', function() {
@@ -59,15 +62,16 @@
                 const userId = this.dataset.id;
                 const userName = this.dataset.username;
                 const userEmail = this.dataset.email;
-
+                console.log(this.dataset)
                 userForm.classList.remove('hidden');  // Menampilkan form
                 const form = userForm.querySelector('form');
 
+                form.innerHTML += `<input type="hidden" name="_method" value="PUT">`;  // Mengatur method PUT
                 form.action = `/admin/users/${userId}`;
                 form.querySelector('input[name="username"]').value = userName;
                 form.querySelector('input[name="email"]').value = userEmail;
                 form.querySelector('input[name="password"]').value = '';
-                form.innerHTML += `<input type="hidden" name="_method" value="PUT">`;  // Mengatur method PUT
+                form.querySelector('button[type="submit"]').innerText = 'Update User';
             });
         });
     });

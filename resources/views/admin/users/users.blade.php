@@ -30,18 +30,18 @@
                     <td class="border border-gray-300 px-4 py-2">{{ $user->email }}</td>
                     <td class="border border-gray-300 px-4 py-2 text-center">
                         <!-- Tombol Edit -->
-                        <button class="edit-user-btn text-blue-500 hover:underline" data-id="{{ $user->id }}"
-                            data-name="{{ $user->name }}" data-email="{{ $user->email }}">
+                        <button class="edit-user-btn text-blue-500 hover:underline" data-id="{{ $user->id_user }}"
+                            data-username="{{ $user->username }}" data-email="{{ $user->email }}">
                             Edit
                         </button>
 
                         <!-- Tombol Delete -->
-                        {{-- <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
+                        <form action="{{ route('admin.users.destroy', $user->id_user) }}" method="POST"
                             onsubmit="return confirm('Are you sure?');">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
-                        </form> --}}
+                        </form>
                     </td>
                 </tr>
             @endforeach
