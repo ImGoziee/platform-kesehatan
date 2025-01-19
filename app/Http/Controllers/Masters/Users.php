@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Masters;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\User;
-use Request;
 
 class Users extends Controller
 {
@@ -37,7 +37,7 @@ class Users extends Controller
 
         $request->validate([
             'username' => 'required|string|max:255',
-            'email' => "required|email|unique:users,email,$id",
+            'email' => "required|email|unique:users,email,$id,id_user",
             'password' => 'nullable|min:8',
         ]);
 
@@ -50,7 +50,7 @@ class Users extends Controller
         return redirect()->route('admin.users.index')->with('success', 'User updated successfully.');
     }
 
-    public function destroy($id)
+    public function destroy(Request $req, $id)
     {
         $user = User::findOrFail($id);
         $user->delete();
