@@ -22,11 +22,9 @@
     @endif
 </head>
 
-<body class="flex bg-gray-100 text-gray-800">
-    <aside class="border-2 border-black h-screen w-64 rounded-r-3xl">
-        <x-partials.sidebar />
-    </aside>
-    <main class="p-6 grow">
+<body class="flex bg-[#DDEDFD] text-gray-800">
+    <x-partials.sidebar />
+    <main class="grow">
         {{ $slot }}
     </main>
 </body>

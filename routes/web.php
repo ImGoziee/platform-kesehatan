@@ -29,8 +29,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/users/{user}/edit', [Users::class, 'edit'])->name('users.edit'); // Form edit user (opsional jika pakai modal)
     Route::put('/users/{id}', [Users::class, 'update'])->name('users.update'); // Update user
     Route::delete('/users/{id}', [Users::class, 'destroy'])->name('users.destroy'); // Hapus user
-
-    
 });
 
 require __DIR__.'/auth.php';
