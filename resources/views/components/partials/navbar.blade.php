@@ -12,8 +12,26 @@
         </ul>
 
         <!-- Login Button -->
-        <a href="{{ route('login') }}" class="duration-300 bg-[#B12B32] hover:bg-white hover:text-[#B12B32] text-white font-semibold py-2 px-6 rounded-3xl">
-            Login
-        </a>
+        @if (Auth::check() && Auth::user()->username)
+            <div x-data="{ open: false }" @click="open = !open" @click.away="open = false" class="cursor-pointer relative flex w-28 items-center text-gray-800">
+                <i class="fa-regular fa-user text-xl mr-4"></i>
+                <span class="text-md font-medium capitalize">{{ Auth::user()->username }}</span>
+                <div class="relative w-8 h-10">
+                    <i class="fa-solid fa-sort-down absolute top-1/2 right-0 -translate-y-[75%]"></i>
+                </div>
+                <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button id="logout-btn" href="{{ route('logout') }}" x-show="open" class="absolute w-28 right-0 -bottom-12 rounded-lg bg-red-700 hover:bg-red-800 border border-red-600 py-2 px-4 text-white shadow-md">
+                        <i class="fa-solid fa-power-off mr-1"></i>
+                        Logout
+                    </button>
+                </form>
+            </div>
+        @else
+            <a href="{{ route('login') }}"
+                class="duration-300 bg-[#B12B32] hover:bg-white hover:text-[#B12B32] text-white font-semibold py-2 px-6 rounded-3xl">
+                Login
+            </a>
+        @endif
     </div>
 </nav>
