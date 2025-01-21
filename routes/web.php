@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Masters\Users;
 use App\Http\Controllers\ProfileController;
@@ -32,5 +32,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     
 });
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login'); // Halaman login
+Route::post('/login', [AuthController::class, 'login'])->name('login');       // Proses login
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');   // Logout
+
 
 require __DIR__.'/auth.php';
