@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::prefix('/')->middleware(['auth', 'verified', 'user'])->group(function () {
-    Route::get('/homepage', [AdminController::class, 'dashboard'])->name('user.dashboard');
+    Route::get('/', [AdminController::class, 'dashboard'])->name('user.dashboard');
 });
 
 Route::middleware('auth')->group(function () {
