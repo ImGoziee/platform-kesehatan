@@ -19,10 +19,10 @@
             <div class="w-full h-[864px] p-8 flex gap-[222px] sm:justify-center">
                 <div class="relative w-[500px] max-lg:hidden">
                     <div class="absolute -bottom-8 flex items-end max-lg:hidden">
-                        <img class="" width="500" src="{{ asset('assets/img/auth-page-img.png') }}" alt="">
+                        <img class="w-[500px]" src="{{ asset('assets/img/auth-page-img.png') }}" alt="">
                     </div>
                 </div>
-                <div class="relative w-full h-[800px] sm:max-w-2xl px-6 py-4 bg-white shadow-md sm:rounded-[35px] sm:rounded-tl-none flex flex-col justify-center items-center">
+                <div class="relative w-full h-full:h-[800px] sm:max-w-xl 2xl:max-w-2xl px-6 py-4 bg-white shadow-md sm:rounded-[35px] sm:rounded-tl-none flex flex-col justify-center items-center">
                     <div class="absolute top-0 -left-0 flex gap-1 rotate-90 origin-top-left">
                         <a href="{{ route('register') }}" class="{{ Route::currentRouteName() === 'login' ? 'bg-[#D2D2D2] text-white' : 'bg-white text-black' }} cursor-pointer w-[185px] h-[62px] shadow-sm text-2xl py-[14px] rounded-t-[35px] rotate-180 font-bold text-center">Sign Up</a>
                         <a href="{{ route('login') }}" class="{{ Route::currentRouteName() === 'register' ? 'bg-[#D2D2D2] text-white' : 'bg-white text-black' }} cursor-pointer w-[185px] h-[62px] shadow-sm text-2xl py-[14px] rounded-t-[35px] rotate-180 font-bold text-center">Sign In</a>
