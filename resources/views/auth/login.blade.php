@@ -16,7 +16,7 @@
         <!-- Email Address -->
         <div class="w-full">
             {{-- <x-input-label for="email" :value="__('Email')" /> --}}
-            <x-text-input id="email" class="w-full !rounded-[35px] py-4 px-10" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-text-input id="email" class="w-full rounded-[35px] py-4 px-10" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -24,7 +24,7 @@
         <div class="mt-4">
             {{-- <x-input-label for="password" :value="__('Password')" /> --}}
 
-            <x-text-input id="password" class="w-full !rounded-[35px] py-4 px-10"
+            <x-text-input id="password" class="w-full rounded-[35px] py-4 px-10"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
