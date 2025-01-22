@@ -27,10 +27,10 @@ Route::middleware('auth')->group(function () {
 Route::prefix('admin')->middleware(['admin'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');;
     Route::get('/users', [Users::class, 'index'])->name('users.index'); // Tampilkan halaman users
-    Route::post('/users', [Users::class, 'store'])->name('users.store'); // Tambah user baru
+    Route::post('/users', [Users::class, 'store'])->name('admin.users.store'); // Tambah user baru
     Route::get('/users/{user}/edit', [Users::class, 'edit'])->name('users.edit'); // Form edit user (opsional jika pakai modal)
     Route::put('/users/{id}', [Users::class, 'update'])->name('users.update'); // Update user
-    Route::delete('/users/{id}', [Users::class, 'destroy'])->name('users.destroy'); // Hapus user
+    Route::delete('/users/{id}', [Users::class, 'destroy'])->name('admin.users.destroy'); // Hapus user
 })->name('admin.');
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login'); // Halaman login
