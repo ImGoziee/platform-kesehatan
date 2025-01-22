@@ -1,7 +1,7 @@
 <x-guest-layout>
-    <img class="mb-10" width="50" src="{{ asset('assets/svg/logos.svg') }}" alt="">
+    <img class="mb-5" width="50" src="{{ asset('assets/svg/logos.svg') }}" alt="">
     <div class="font-semibold text-center">
-        <h1 class="text-[3.5rem] leading-tight">Create new account</h1>
+        <h1 class="text-[2.5rem] leading-tight">Create new account</h1>
         <div class="flex items-center gap-1 text-lg">
             <p>Already a Account?</p>
             <a class="text-[#E00852]" href="{{ route('login') }}">
@@ -9,14 +9,13 @@
             </a>
         </div>
     </div>
-    <form method="POST" action="{{ route('register') }}" class="w-full max-w-[520px] mt-[35px]">
+    <form method="POST" action="{{ route('register') }}" class="w-full max-w-[520px] mt-[15px]">
         @csrf
 
         <!-- Name -->
         <div class="flex gap-2.5">
             {{-- <x-input-label for="username" :value="__('Username')" /> --}}
             <x-text-input id="username" class="w-full !rounded-[35px] py-4 px-10" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
-            <x-text-input id="username" class="w-full !rounded-[35px] py-4 px-10" disabled="disabled" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('username')" class="mt-2" />
         </div>
 
@@ -54,12 +53,12 @@
             {{-- <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a> --}}
-            <x-primary-button class="w-full inline-flex justify-center !capitalize !text-black !text-2xl !bg-[#E00852] border border-black !rounded-[35px] py-4 px-10">
+            <x-primary-button class="w-full inline-flex justify-center !capitalize !text-black !text-xl !bg-[#E00852] border border-black !rounded-[35px] py-3 px-6">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
         <div class="flex items-center my-10 justify-center">
-            <img class="" width="250" src="{{ asset('assets/img/other-auth.png') }}" alt="">
+            <img class="" width="200" src="{{ asset('assets/img/other-auth.png') }}" alt="">
         </div>
     </form>
 </x-guest-layout>
