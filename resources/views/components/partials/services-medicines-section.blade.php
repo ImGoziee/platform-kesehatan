@@ -22,6 +22,20 @@
                 @endfor
             </div>
         </div>
+        {{-- daftar penyakit --}}
+        <div class="flex flex-col gap-9 py-[45px] px-[94px]">
+            <h1 class="text-[42px] font-semibold">Daftar Penyakit</h1>
+            <div class="grid grid-cols-6 gap-[15px]">
+                @for ($i = 0; $i < 6; $i++)
+                    <div class="col-span-2 bg-[#D9D9D9] h-[90px] w-full rounded-[25px] py-2.5 px-7 flex gap-[45px] items-center mb-[30px]">
+                        {!! $i !== 5 ? '<div class="w-[70px] h-[70px] bg-[#E00852] rounded-[25px]"></div>' : '' !!}
+                        <div class="{{ $i === 5 ? 'flex justify-center w-full' : '' }}">
+                            <h1 class="text-[22px] font-semibold">{{ $i === 5 ? 'Lihat Semua' : 'Lorem, ipsum.' }}</h1>
+                        </div>
+                    </div>
+                @endfor
+            </div>
+        </div>
         <div class="flex flex-col gap-9 py-[65px] px-[94px]">
             <h1 class="text-[42px] font-semibold">Penawaran Menarik</h1>
             <div class="relative w-full">

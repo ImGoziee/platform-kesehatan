@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage');
 });
+Route::get('/artikel', function () {
+    return view('artikelpage');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
