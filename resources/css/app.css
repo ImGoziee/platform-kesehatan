@@ -9,7 +9,7 @@
 }
 
 .panjang-maksimal {
-    @apply max-w-[80rem] 2xl:max-w-[98rem];
+    @apply !max-w-[80rem] 2xl:max-w-[98rem];
     margin: 0 auto;
 }
 
@@ -32,3 +32,283 @@
     height: 12px;
   }
   
+  .top-ter span {
+    background-color: #E00852;
+    color: white;
+    padding: 8px 80px;
+    border-radius: 20px;
+    margin: 0 20px 0 0;
+}
+
+.top-ter h2 {
+    margin-bottom: 20px;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    padding: 65px 0px 25px;
+}
+
+.top {
+    /* margin-top: 27px */
+}
+
+.slider-artikel h2 {
+    margin-bottom: 20px;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    padding: 65px 0px 25px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    /* Warna latar belakang */
+    border-radius: 50px;
+    /* Membuat sudut membulat */
+    padding: 8px 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Memberikan efek bayangan */
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: #6c757d;
+    /* Warna teks placeholder */
+    padding: 5px 10px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #6c757d;
+}
+
+.search-button {
+    background-color: #e91e63;
+    /* Warna tombol sesuai gambar */
+    border: none;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #c2185b;
+}
+
+.search-button-icon {
+    font-size: 16px;
+}
+
+
+
+.card {
+    border-radius: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+    height: auto;
+    display: flex;
+    border-radius: 35px 35px 0px 0px;
+    width: 100%;
+}
+
+.card-body {
+    text-align: left;
+}
+
+.card-body h3 {
+    margin: -5px 0 5px;
+    font-family: Maven Pro;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+}
+
+.card-body .category {
+    display: inline-block;
+    background-color: #E00852;
+    color: #fff;
+    padding: 2px 43px;
+    border-radius: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    /* line-height: 23px; */
+    text-align: center;
+}
+
+.card-body p {
+    color: #000000;
+    font-family: Maven Pro;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    text-align: left;
+}
+
+button.next {
+    font-family: Maven Pro;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    background-color: #E00852;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button.next:hover {
+    background-color: #c00746;
+}
+
+.popular {
+    padding: 20px 0;
+}
+
+.popular h2 {
+    margin-bottom: 20px;
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    padding: 65px 0px 25px;
+}
+
+.popular p {
+    padding: 8px 0;
+}
+
+.popular button {
+    padding: 10px 20px;
+    background-color: #E00852;
+    border-radius: 10px;
+    width: 210px;
+    align-items: center;
+    margin: 45px 450px;
+}
+
+.art-pop {
+    margin-top: 155px;
+}
+
+.artikelpop h2 {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: Poppins;
+    font-weight: 500;
+    padding: 65px 0px 25px;
+}
+
+.artikelpop .col-md-6 {
+    background-size: cover;
+    border-radius: 40px;
+}
+
+.artikelpop .col-md-5 {
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px 25px;
+}
+
+.artikelpop .col-md-7 {
+    padding: 0;
+}
+
+.artikelpop .row.e {
+    padding: 0 15px 15px;
+}
+
+.big-art {
+    padding: 300px 35px 10px;
+}
+
+.artikelpop .big-art img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.artikelpop .big-art h3 {
+    font-family: Maven Pro;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
+    padding: 12px 0;
+}
+
+.artikelpop .big-art p {
+    font-family: Maven Pro;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 24px;
+}
+
+.big-art span {
+    background-color: #E00852;
+    color: white;
+    padding: 8px 80px;
+    border-radius: 20px;
+}
+
+.artikelpop .cardcover .col-md-5 img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.minicard {
+    padding: 23px;
+}
+
+.minicard span {
+    background-color: #E00852;
+    color: white;
+    padding: 8px 80px;
+    border-radius: 20px;
+}
+
+.artikel-wrapper {
+    background: white;
+    padding: 0px 100px 100px;
+    border-radius: 20px;
+    box-shadow: 11px 11px 0px rgb(204 3 3);
+    margin-top: 20px;
+}
+
+.popular-wrapper {
+    background: white;
+    padding: 0px 100px;
+    border-radius: 20px;
+    box-shadow: 11px 11px 0px rgb(204 3 3);
+    margin-top: 20px;
+}

@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('homepage');
 // });
+Route::get('/artikel', function () {
+    return view('artikelpage');
+});
 
 Route::prefix('/')->middleware(['auth', 'verified', 'user'])->group(function () {
     Route::get('/', [AdminController::class, 'dashboard'])->name('user.dashboard');

@@ -51,13 +51,13 @@
                 </a>
             @endif --}}
 
-            <x-primary-button class="w-full inline-flex justify-center !capitalize !text-black !text-2xl !bg-[#E00852] border border-black rounded-[35px] py-4 px-10">
+            <x-primary-button class="w-full inline-flex justify-center !capitalize !text-black !text-xl !bg-[#E00852] border border-black !rounded-[35px] py-3 px-6">
                 {{ __('Sign in') }}
             </x-primary-button>
         </div>
         <p class="font-semibold text-lg text-center mt-4">Or sign in with</p>
         <div class="flex items-center mt-32 justify-center">
-            <img class="" width="250" src="{{ asset('assets/img/other-auth.png') }}" alt="">
+            <img class="" width="200" src="{{ asset('assets/img/other-auth.png') }}" alt="">
         </div>
     </form>
 </x-guest-layout>
