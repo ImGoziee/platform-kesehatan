@@ -20,10 +20,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/admin/dashboard', [AdminController::class, 'index']);
+// Admin Dashboard
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->middleware(['auth', 'admin']);
 
-// Users
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(function () {
+    // Users
     Route::get('/users', [Users::class, 'index'])->name('users.index'); // Tampilkan halaman users
     Route::post('/users', [Users::class, 'store'])->name('users.store'); // Tambah user baru
     Route::get('/users/{user}/edit', [Users::class, 'edit'])->name('users.edit'); // Form edit user (opsional jika pakai modal)

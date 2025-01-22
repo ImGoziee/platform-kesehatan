@@ -14,12 +14,12 @@ class CheckRole
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, $role)
+    public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->role === $role) {
-            return $next($request);
+        if (Auth::user()->role != 'admin') {
+            return redirect('/'); // Or a "not authorized" page
         }
-
-        return redirect('/'); // Or a "not authorized" page
+        
+        return $next($request);
     }
 }
