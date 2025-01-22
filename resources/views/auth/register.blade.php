@@ -15,15 +15,15 @@
         <!-- Name -->
         <div class="flex gap-2.5">
             {{-- <x-input-label for="username" :value="__('Username')" /> --}}
-            <x-text-input id="username" class="w-full rounded-[35px] py-4 px-10" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
-            <x-text-input id="username" class="w-full rounded-[35px] py-4 px-10" disabled="disabled" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+            <x-text-input id="username" class="w-full !rounded-[35px] py-4 px-10" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+            <x-text-input id="username" class="w-full !rounded-[35px] py-4 px-10" disabled="disabled" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('username')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
         <div class="mt-4">
             {{-- <x-input-label for="email" :value="__('Email')" /> --}}
-            <x-text-input id="email" class="w-full rounded-[35px] py-4 px-10" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-text-input id="email" class="w-full !rounded-[35px] py-4 px-10" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -31,7 +31,7 @@
         <div class="mt-4">
             {{-- <x-input-label for="password" :value="__('Password')" /> --}}
 
-            <x-text-input id="password" class="w-full rounded-[35px] py-4 px-10"
+            <x-text-input id="password" class="w-full !rounded-[35px] py-4 px-10"
                             type="password"
                             name="password"
                             required autocomplete="new-password" />
@@ -43,7 +43,7 @@
         <div class="mt-4">
             {{-- <x-input-label for="password_confirmation" :value="__('Confirm Password')" /> --}}
 
-            <x-text-input id="password_confirmation" class="w-full rounded-[35px] py-4 px-10"
+            <x-text-input id="password_confirmation" class="w-full !rounded-[35px] py-4 px-10"
                             type="password"
                             name="password_confirmation" required autocomplete="new-password" />
 
@@ -54,7 +54,7 @@
             {{-- <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a> --}}
-            <x-primary-button class="w-full inline-flex justify-center !capitalize !text-black !text-2xl !bg-[#E00852] border border-black rounded-[35px] py-4 px-10">
+            <x-primary-button class="w-full inline-flex justify-center !capitalize !text-black !text-2xl !bg-[#E00852] border border-black !rounded-[35px] py-4 px-10">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
