@@ -23,6 +23,7 @@
 </head>
 
 <body class="flex bg-[#DDEDFD] text-gray-800">
+    <x-partials.sidebar />
     <main class="grow">
         {{ $slot }}
     </main>
