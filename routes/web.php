@@ -56,7 +56,7 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
     // penyakit
     Route::get('/penyakit', [Penyakits::class, 'index'])->name('admin.penyakit.index');
     Route::post('/penyakit', [Penyakits::class, 'store'])->name('admin.penyakit.store');
-    Route::get('/penyakit/{user}/edit', [Penyakits::class, 'edit'])->name('admin.penyakit.edit');
+    Route::get('/penyakit/{id}/edit', [Penyakits::class, 'edit'])->name('admin.penyakit.edit');
     Route::put('/penyakit/{id}', [Penyakits::class, 'update'])->name('admin.penyakit.update');
     Route::delete('/penyakit/{id}', [Penyakits::class, 'destroy'])->name('admin.penyakit.destroy');
 

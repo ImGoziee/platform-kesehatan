@@ -9,6 +9,7 @@ class Obat extends Model
 {
     /** @use HasFactory<\Database\Factories\ObatFactory> */
     use HasFactory;
+    // protected $table = 'obat';
 
     protected $fillable = [
         'id_ahli',
