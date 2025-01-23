@@ -9,4 +9,15 @@ class Obat extends Model
 {
     /** @use HasFactory<\Database\Factories\ObatFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'id_ahli',
+        'id_penyakit',
+        'nama_obat',
+        'resep_obat',
+        'deskripsi_obat',
+        'ilustrasi_obat',
+    ];
+
+    protected $primaryKey = 'id_obat';
 }

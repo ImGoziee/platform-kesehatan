@@ -9,4 +9,15 @@ class ahli extends Model
 {
     /** @use HasFactory<\Database\Factories\AhliFactory> */
     use HasFactory;
+
+    protected $fillable = [
+        'id_obat',
+        'nama_ahli',
+        'foto_ahli',
+        'email_ahli',
+        'nomor_ahli',
+        'deskripsi_ahli',
+    ];
+
+    protected $primaryKey = 'id_ahli';
 }

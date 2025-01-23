@@ -1,12 +1,12 @@
 <?php
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Masters\Ahli;
+use App\Http\Controllers\Masters\Ahlis;
 use App\Http\Controllers\Masters\Artikel;
-use App\Http\Controllers\Masters\Penyakit;
+use App\Http\Controllers\Masters\Penyakits;
 use App\Http\Controllers\Masters\Users;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Masters\Obat;
+use App\Http\Controllers\Masters\Obats;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
@@ -40,11 +40,11 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
     Route::delete('/users/{id}', [Users::class, 'destroy'])->name('admin.users.destroy'); // Hapus user
 
     // obat
-    Route::get('/obat', [Obat::class, 'index'])->name('admin.obat.index');
-    Route::post('/obat', [Obat::class, 'store'])->name('admin.obat.store');
-    Route::get('/obat/{user}/edit', [Obat::class, 'edit'])->name('admin.obat.edit');
-    Route::put('/obat/{id}', [Obat::class, 'update'])->name('admin.obat.update');
-    Route::delete('/obat/{id}', [Obat::class, 'destroy'])->name('admin.obat.destroy');
+    Route::get('/obat', [Obats::class, 'index'])->name('admin.obat.index');
+    Route::post('/obat', [Obats::class, 'store'])->name('admin.obat.store');
+    Route::get('/obat/{user}/edit', [Obats::class, 'edit'])->name('admin.obat.edit');
+    Route::put('/obat/{id}', [Obats::class, 'update'])->name('admin.obat.update');
+    Route::delete('/obat/{id}', [Obats::class, 'destroy'])->name('admin.obat.destroy');
 
     // artikel
     Route::get('/artikel', action: [Artikel::class, 'index'])->name('admin.artikel.index');
@@ -54,18 +54,18 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
     Route::delete('/artikel/{id}', [Artikel::class, 'destroy'])->name('admin.artikel.destroy');
 
     // penyakit
-    Route::get('/penyakit', [Penyakit::class, 'index'])->name('admin.penyakit.index');
-    Route::post('/penyakit', [Penyakit::class, 'store'])->name('admin.penyakit.store');
-    Route::get('/penyakit/{user}/edit', [Penyakit::class, 'edit'])->name('admin.penyakit.edit');
-    Route::put('/penyakit/{id}', [Penyakit::class, 'update'])->name('admin.penyakit.update');
-    Route::delete('/penyakit/{id}', [Penyakit::class, 'destroy'])->name('admin.penyakit.destroy');
+    Route::get('/penyakit', [Penyakits::class, 'index'])->name('admin.penyakit.index');
+    Route::post('/penyakit', [Penyakits::class, 'store'])->name('admin.penyakit.store');
+    Route::get('/penyakit/{user}/edit', [Penyakits::class, 'edit'])->name('admin.penyakit.edit');
+    Route::put('/penyakit/{id}', [Penyakits::class, 'update'])->name('admin.penyakit.update');
+    Route::delete('/penyakit/{id}', [Penyakits::class, 'destroy'])->name('admin.penyakit.destroy');
 
     // ahli
-    Route::get('/ahli', [Ahli::class, 'index'])->name('admin.ahli.index');
-    Route::post('/ahli', [Ahli::class, 'store'])->name('admin.ahli.store');
-    Route::get('/ahli/{user}/edit', [Ahli::class, 'edit'])->name('admin.ahli.edit');
-    Route::put('/ahli/{id}', [Ahli::class, 'update'])->name('admin.ahli.update');
-    Route::delete('/ahli/{id}', [Ahli::class, 'destroy'])->name('admin.ahli.destroy');
+    Route::get('/ahli', [Ahlis::class, 'index'])->name('admin.ahli.index');
+    Route::post('/ahli', [Ahlis::class, 'store'])->name('admin.ahli.store');
+    Route::get('/ahli/{user}/edit', [Ahlis::class, 'edit'])->name('admin.ahli.edit');
+    Route::put('/ahli/{id}', [Ahlis::class, 'update'])->name('admin.ahli.update');
+    Route::delete('/ahli/{id}', [Ahlis::class, 'destroy'])->name('admin.ahli.destroy');
 })->name('admin.');
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login'); // Halaman login

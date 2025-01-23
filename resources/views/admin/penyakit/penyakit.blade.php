@@ -10,8 +10,8 @@
     </div>
 
     <!-- Form Add/Edit -->
-    <div id="user-form" class="hidden">
-        @include('admin.users.usersForm', ['user' => new \App\Models\User()])
+    <div id="penyakit-form" class="hidden">
+        @include('admin.penyakit.penyakitForm', ['penyakit' => new \App\Models\Penyakit()])
     </div>
 
     <!-- Tabel Data Users -->
@@ -21,27 +21,33 @@
                 <tr>
                     <th class="border border-gray-300 px-4 py-2">#</th>
                     <th class="border border-gray-300 px-4 py-2">Name</th>
-                    <th class="border border-gray-300 px-4 py-2">Email</th>
+                    <th class="border border-gray-300 px-4 py-2">Penjelasan</th>
+                    <th class="border border-gray-300 px-4 py-2">Penyebab</th>
+                    <th class="border border-gray-300 px-4 py-2">Ilustrasi</th>
                     <th class="border border-gray-300 px-4 py-2">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($users as $user)
+                @foreach ($penyakits as $penyakit)
                     <tr>
                         <td class="border border-gray-300 px-4 py-2 text-center">{{ $loop->iteration }}</td>
-                        <td class="border border-gray-300 px-4 py-2">{{ $user->username }}</td>
-                        <td class="border border-gray-300 px-4 py-2">{{ $user->email }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $penyakit->nama_penyakit }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $penyakit->penjelasan_penyakit }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $penyakit->penyebab_penyakit }}</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <div class="flex justify-center w-full"><img class="w-40 max-w-40" src="{{ asset('storage/' . $penyakit->ilustrasi_penyakit) }}" alt="Illustration"></div>
+                        </td>
                         <td class="border border-gray-300 px-4 py-2">
                             <div class="flex justify-center gap-1">
                                 <!-- Tombol Edit -->
-                                <button class="edit-user-btn bg-yellow-400 py-1 px-2 rounded-md text-white hover:bg-yellow-500"
-                                    data-id="{{ $user->id_user }}" data-username="{{ $user->username }}"
-                                    data-email="{{ $user->email }}">
+                                <button class="edit-penyakit-btn bg-yellow-400 py-1 px-2 rounded-md text-white hover:bg-yellow-500"
+                                    data-id="{{ $penyakit->id_penyakit }}" data-name="{{ $penyakit->name }}"
+                                    data-penjelasan="{{ $penyakit->penjelasan_penyakit }}">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
 
                                 <!-- Tombol Delete -->
-                                <form action="{{ route('admin.users.destroy', $user->id_user) }}" method="POST"
+                                <form action="{{ route('admin.penyakit.destroy', $penyakit->id_penyakit) }}" method="POST"
                                     onsubmit="return confirm('Are you sure?');">
                                     @csrf
                                     @method('DELETE')
@@ -52,7 +58,7 @@
                             </div>
                         </td>
                     </tr>
-                @endforeach --}}
+                @endforeach
             </tbody>
         </table>
     </div>
