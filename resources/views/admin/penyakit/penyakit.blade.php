@@ -1,17 +1,19 @@
 <x-layouts.admin :title="'Management Penyakit'">
-
     <div class="flex items-center m-4 p-4 justify-between bg-white rounded-xl shadow-md">
         <h1 class="text-xl font-semibold text-gray-700">Management Penyakit</h1>
 
         <!-- Tombol Add User -->
-        <button id="add-user-btn" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
-            Add User
+        <button id="add-penyakit-btn" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+            Add Data
         </button>
     </div>
 
     <!-- Form Add/Edit -->
     <div id="penyakit-form" class="hidden">
-        @include('admin.penyakit.penyakitForm', ['penyakit' => new \App\Models\Penyakit()])
+        @include('admin.penyakit.penyakitForm', [
+        'penyakit' => new \App\Models\Penyakit(),
+        'obats' => \App\Models\Obat::select('id_obat', 'nama_obat')->get()
+    ])
     </div>
 
     <!-- Tabel Data Users -->
@@ -41,8 +43,8 @@
                             <div class="flex justify-center gap-1">
                                 <!-- Tombol Edit -->
                                 <button class="edit-penyakit-btn bg-yellow-400 py-1 px-2 rounded-md text-white hover:bg-yellow-500"
-                                    data-id="{{ $penyakit->id_penyakit }}" data-name="{{ $penyakit->name }}"
-                                    data-penjelasan="{{ $penyakit->penjelasan_penyakit }}">
+                                    data-id="{{ $penyakit->id_penyakit }}" data-name="{{ $penyakit->nama_penyakit }}"
+                                    data-penjelasan="{{ $penyakit->penjelasan_penyakit }}" data-obat="{{ $penyakit->id_obat }}" data-penyebab="{{ $penyakit->penyebab_penyakit }}" data-image="{{ $penyakit->ilustrasi_penyakit }}">
                                     <i class="fa-solid fa-pen"></i>
                                 </button>
 
