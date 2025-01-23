@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/artikel', function () {
     return view('artikelpage');
 });
+Route::get('/penyakit', function () {
+    return view('detailpage.detailPenyakit');
+});
+Route::get('/obat', function () {
+    return view('detailpage.detailObat');
+});
 
 Route::prefix('/')->middleware(['auth', 'verified', 'user'])->group(function () {
     Route::get('/', [AdminController::class, 'dashboard'])->name('user.dashboard');

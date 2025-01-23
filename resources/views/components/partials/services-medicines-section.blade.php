@@ -1,24 +1,13 @@
 <div class="panjang-maksimal pt-[118px]">
     <div class="container-withShadow">
         <div class="flex flex-col gap-9 py-[65px] px-[94px]">
-            <h1 class="text-[42px] font-semibold">Layanan Khusus</h1>
-            <div class="flex w-full justify-between">
-                @for ($i = 0; $i < 7; $i++)
-                    <div class="flex-col">
-                        <div class="bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"></div>
-                        <p class="font-medium text-center">Lorem</p>
-                    </div>
-                @endfor
-            </div>
-        </div>
-        <div class="flex flex-col gap-9 py-[65px] px-[94px]">
             <h1 class="text-[42px] font-semibold">Obat - Obatan</h1>
             <div class="flex w-full justify-between">
                 @for ($i = 0; $i < 7; $i++)
-                    <div class="flex-col">
-                        <div class="bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"></div>
+                    <button onclick="window.location='obat';" class="group flex-col">
+                        <div class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"></div>
                         <p class="font-medium text-center">Lorem</p>
-                    </div>
+                    </button>
                 @endfor
             </div>
         </div>
@@ -27,12 +16,12 @@
             <h1 class="text-[42px] font-semibold">Daftar Penyakit</h1>
             <div class="grid grid-cols-6 gap-[15px]">
                 @for ($i = 0; $i < 6; $i++)
-                    <div class="col-span-2 bg-[#D9D9D9] h-[90px] w-full rounded-[25px] py-2.5 px-7 flex gap-[45px] items-center mb-[30px]">
+                    <button onclick="window.location='penyakit';" class="col-span-2 shadow-md duration-200 bg-[#f2f2f2] hover:bg-[#D9D9D9] h-[90px] w-full rounded-[25px] py-2.5 px-7 flex gap-[45px] items-center mb-[30px]">
                         {!! $i !== 5 ? '<div class="w-[70px] h-[70px] bg-[#E00852] rounded-[25px]"></div>' : '' !!}
                         <div class="{{ $i === 5 ? 'flex justify-center w-full' : '' }}">
                             <h1 class="text-[22px] font-semibold">{{ $i === 5 ? 'Lihat Semua' : 'Lorem, ipsum.' }}</h1>
                         </div>
-                    </div>
+                    </button>
                 @endfor
             </div>
         </div>

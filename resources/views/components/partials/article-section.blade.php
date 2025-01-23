@@ -1,7 +1,7 @@
 <div class="panjang-maksimal py-[67px]">
     <div class="container-withShadow">
         <div class="flex flex-col gap-9 py-[65px] px-[94px]">
-            <h1 class="text-[42px] font-semibold">Baca 99+ Artikel Berikut</h1>
+            <h1 class="text-[42px] font-semibold">Baca Artikel Berikut</h1>
             <div class="relative w-full">
                 <button id="prev-2"
                     class="absolute -left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-gray-600 w-10 h-10 rounded-full z-10 text-white">
