@@ -6,13 +6,14 @@ use App\Http\Controllers\Masters\Ahlis;
 use App\Http\Controllers\Masters\Artikel;
 use App\Http\Controllers\Masters\Penyakits;
 use App\Http\Controllers\Masters\Users;
+use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Masters\Obats;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', [Obats::class, 'homepage'])->name('homepage');
-Route::get('/', [ObatController::class, 'homepage'])->name('homepage');
+Route::get('/', [Penyakits::class, 'homepage'])->name('homepage');
+
 Route::get('/artikel', function () {
     return view('artikelpage');
 });
@@ -23,9 +24,9 @@ Route::get('/obat', function () {
     return view('detailpage.detailObat');
 });
 
-Route::prefix('a')->middleware(['auth', 'verified', 'user'])->group(function () {
-    Route::get('/', [AdminController::class, 'dashboard'])->name('user.dashboard');
-});
+// Route::prefix('/admin')->middleware(['auth', 'verified', 'user'])->group(function () {
+    // Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('user.dashboard');
+// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
