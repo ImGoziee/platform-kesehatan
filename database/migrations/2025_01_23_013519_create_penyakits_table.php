@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('penyakits', function (Blueprint $table) {
             $table->id('id_penyakit');
-            $table->unsignedBigInteger('id_obat')->references('id_obat')->on('obats');
+            $table->unsignedBigInteger('id_obat')->references('id_obat')->on('obats')->NULLABLE;
             $table->string('nama_penyakit');
-            $table->string('penjelasan_penyakit');
-            $table->string('penyebab_penyakit');
+            $table->longText('penjelasan_penyakit');
+            $table->longText('penyebab_penyakit');
             $table->string('ilustrasi_penyakit');
             $table->timestamps();
         });
