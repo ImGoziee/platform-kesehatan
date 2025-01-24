@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_artikel')->references('id_artikel')->on('artikels');
             $table->string('judul_sub_bab');
-            $table->string('isi_sub_bab');
+            $table->longText('isi_sub_bab');
             $table->integer('urutan_sub_bab');
             $table->timestamps();
         });
