@@ -5,21 +5,27 @@ use App\Http\Controllers\Masters\Ahlis;
 use App\Http\Controllers\Masters\Artikel;
 use App\Http\Controllers\Masters\Penyakits;
 use App\Http\Controllers\Masters\Users;
+use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Masters\Obats;
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('homepage');
-// });
+Route::get('/', [Penyakits::class, 'homepage'])->name('homepage');
+
 Route::get('/artikel', function () {
     return view('artikelpage');
 });
-
-Route::prefix('/')->middleware(['auth', 'verified', 'user'])->group(function () {
-    Route::get('/', [AdminController::class, 'dashboard'])->name('user.dashboard');
+Route::get('/penyakit', function () {
+    return view('detailpage.detailPenyakit');
 });
+Route::get('/obat', function () {
+    return view('detailpage.detailObat');
+});
+
+// Route::prefix('/admin')->middleware(['auth', 'verified', 'user'])->group(function () {
+    // Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('user.dashboard');
+// });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -56,7 +62,7 @@ Route::prefix('admin')->middleware(['admin'])->group(function () {
     // penyakit
     Route::get('/penyakit', [Penyakits::class, 'index'])->name('admin.penyakit.index');
     Route::post('/penyakit', [Penyakits::class, 'store'])->name('admin.penyakit.store');
-    Route::get('/penyakit/{user}/edit', [Penyakits::class, 'edit'])->name('admin.penyakit.edit');
+    Route::get('/penyakit/{id}/edit', [Penyakits::class, 'edit'])->name('admin.penyakit.edit');
     Route::put('/penyakit/{id}', [Penyakits::class, 'update'])->name('admin.penyakit.update');
     Route::delete('/penyakit/{id}', [Penyakits::class, 'destroy'])->name('admin.penyakit.destroy');
 
