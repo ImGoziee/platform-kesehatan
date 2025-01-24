@@ -30,10 +30,10 @@
             <h1 class="font-semibold text-5xl mb-10">Lorem Ipsum Nama Penyakit</h1>
             <p class="max-w-[65rem] font-medium text-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo nam natus labore. Adipisci dolorum consequatur perferendis alias dolore non sunt ipsum harum distinctio. Aliquam voluptatum numquam, assumenda adipisci maiores veritatis ipsam perferendis necessitatibus? Hic dolor culpa quia porro? Ipsam aliquam corrupti sequi ab labore ad ducimus fuga consectetur delectus. Doloribus?</p>
         </div>
-        <div class="panjang-maksimal container-withShadow bg-white text-black !mt-24 p-20 rounded-[35px]">
+        {{-- <div class="panjang-maksimal container-withShadow bg-white text-black !mt-24 p-20 rounded-[35px]">
             <h1 class="font-semibold text-3xl mb-9">Lorem Ipsum Nama Penyakit</h1>
             <p class="max-w-[65rem] font-medium text-xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo nam natus labore. Adipisci dolorum consequatur perferendis alias dolore non sunt ipsum harum distinctio. Aliquam voluptatum numquam, assumenda adipisci maiores veritatis ipsam perferendis necessitatibus? Hic dolor culpa quia porro? Ipsam aliquam corrupti sequi ab labore ad ducimus fuga consectetur delectus. Doloribus?</p>
-        </div>
+        </div> --}}
         <div class="panjang-maksimal !mt-20">
             <div class="text-3xl font-semibold text-center rounded-[25px] w-[300px] py-3 bg-white text-black">Penyebab</div>
             <div class="panjang-maksimal container-withShadow bg-white text-black !mt-6 p-20 rounded-[35px]">

@@ -9,6 +9,7 @@ class Penyakit extends Model
 {
     /** @use HasFactory<\Database\Factories\PenyakitFactory> */
     use HasFactory;
+    protected $table = 'penyakits';
     protected $primaryKey = 'id_penyakit';
     protected $fillable = [ 
         'id_obat',

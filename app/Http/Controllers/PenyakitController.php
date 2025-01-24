@@ -11,9 +11,11 @@ class PenyakitController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function homepage()
     {
-        //
+        $penyakit = Penyakit::all();
+        dd($penyakit);
+        return view('homepage', compact('penyakit'));
     }
 
     /**

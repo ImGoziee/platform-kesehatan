@@ -85,4 +85,11 @@ class Penyakits extends Controller
         
         return redirect()->route('admin.penyakit.index')->with('success', 'Data delete successfully.');
     }
+
+    public function homepage()
+    {
+        $penyakits = Penyakit::all();
+        // dd($penyakits);
+        return view('homepage', compact('penyakits'));
+    }
 }

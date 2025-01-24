@@ -15,7 +15,7 @@
         @if (Auth::check() && Auth::user()->username)
             <div x-data="{ open: false }" @click="open = !open" @click.away="open = false" class="!cursor-pointer !relative !flex !w-28 !items-center !text-gray-800">
                 <i class="fa-regular fa-user !text-xl !mr-4"></i>
-                <span class="!text-md !font-medium !capitalize">{{ Auth::user()->username }}</span>
+                <span class="!text-md !font-medium !capitalize !truncate">{{ Auth::user()->username }}</span>
                 <div class="!relative !w-8 !h-10">
                     <i class="fa-solid fa-sort-down !absolute !top-1/2 !right-0 -translate-y-[75%]"></i>
                 </div>

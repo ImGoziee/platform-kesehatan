@@ -9,7 +9,7 @@ class ahli extends Model
 {
     /** @use HasFactory<\Database\Factories\AhliFactory> */
     use HasFactory;
-    protected $table = 'ahli';
+    // protected $table = 'ahli';
 
     protected $fillable = [
         'id_obat',

@@ -31,7 +31,9 @@
     </section>
     {{-- services & medicines section --}}
     <section class="bg-[#E00852] rounded-t-[35px]">
-        <x-partials.services-medicines-section />
+        {{-- {{dd($penyakits)}}; --}}
+        @include('components.partials.services-medicines-section', ['penyakit' => $penyakits])
+        {{-- <x-partials.services-medicines-section /> --}}
         <x-partials.article-section />
     </section>
     {{-- footer --}}
