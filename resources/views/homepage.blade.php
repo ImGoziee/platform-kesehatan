@@ -31,7 +31,8 @@
     </section>
     {{-- services & medicines section --}}
     <section class="bg-[#E00852] rounded-t-[35px]">
-        <x-partials.services-medicines-section />
+        <x-partials.services-medicines-section :medicines="$medicines"/>
+        <!-- @include('components.partials.services-medicines-section', ['medicines' => $medicines]) -->
         <x-partials.article-section />
     </section>
     {{-- footer --}}

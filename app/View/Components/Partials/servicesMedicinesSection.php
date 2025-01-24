@@ -8,12 +8,14 @@ use Illuminate\View\Component;
 
 class servicesMedicinesSection extends Component
 {
+
+    public $medicines;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($medicines)
     {
-        //
+        $this->medicines = $medicines;
     }
 
     /**

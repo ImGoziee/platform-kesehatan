@@ -3,12 +3,55 @@
         <div class="flex flex-col gap-9 py-[65px] px-[94px]">
             <h1 class="text-[42px] font-semibold">Obat - Obatan</h1>
             <div class="flex w-full justify-between">
-                @for ($i = 0; $i < 7; $i++)
-                    <button onclick="window.location='obat';" class="group flex-col">
-                        <div class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"></div>
-                        <p class="font-medium text-center">Lorem</p>
-                    </button>
-                @endfor
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_herbal.jpeg') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_obatan.png') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_obatan.png') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_obatan.png') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_obatan.png') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_obatan.png') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
+                <button onclick="window.location='obat7';" class="group flex-col">
+                    <div 
+                        class="group-hover:bg-gray-300 shadow-md border border-gray-300 bg-[#DDEDFD] h-[85px] w-[85px] rounded-2xl"
+                        style="background-image: url('{{ asset('assets/img/obat_obatan.png') }}'); background-size: cover; background-position: center;">
+                    </div>
+                    <p class="font-medium text-center">obat herbal</p>
+                </button>
             </div>
         </div>
         {{-- daftar penyakit --}}

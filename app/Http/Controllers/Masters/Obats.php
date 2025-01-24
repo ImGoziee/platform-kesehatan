@@ -102,4 +102,11 @@ class Obats extends Controller
         return redirect()->route('admin.obat.index')->with('success', 'Data deleted successfully.');
     }
 
+    public function homepage()
+    {
+        $medicines = Obat::all();
+        
+        return view('homepage', ["medicines" => $medicines]);
+    }
+
 }

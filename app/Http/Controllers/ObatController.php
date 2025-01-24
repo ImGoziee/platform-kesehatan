@@ -11,10 +11,12 @@ class ObatController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function homepage()
     {
-        //
+        $medicines = Obat::all();
+        return view('homepage', compact('medicines'));
     }
+
 
     /**
      * Show the form for creating a new resource.
