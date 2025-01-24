@@ -45,7 +45,7 @@
                 <div class="px-7 w-full h-full flex items-center min-w-full">
                     <div class="relative flex flex-col gap-16 w-full">
                         <div class="">
-                            <h1 class="text-5xl font-semibold">Layanan, Cape Anjg</h1>
+                            <h1 class="text-5xl font-semibold">Layanan, Penanganan Rabies</h1>
                             <p class="mt-4 text-xl max-w-[50rem]">Lorem ipsum dolor sit amet consectetur adipisicing
                                 elit. Fuga voluptates quas ratione voluptas illum fugiat? Hic exercitationem temporibus
                                 nisi debitis.</p>
@@ -55,8 +55,8 @@
                                 <div class=" w-[155px] h-[155px] flex flex-col justify-center items-center gap-2"></div>
                             @endfor
                         </div>
-                        <div class="absolute bottom-1/2 translate-y-2/3 2xl:-right-56 -right-40">
-                            <img class="2xl:w-[650px] w-[650px]" src="{{ asset('assets/img/male.png') }}"
+                        <div class="absolute bottom-1/2 translate-y-2/3 2xl:-right-20">
+                            <img class="2xl:w-[450px]" src="{{ asset('assets/img/image-3.png') }}"
                                 alt="Icon">
                         </div>
                     </div>
